@@ -1,6 +1,6 @@
 import React from 'react';
 
-function nav(props) {
+function Nav(props) {
     const { currentPage, setCurrentPage } = props
 
     return (
@@ -10,25 +10,38 @@ function nav(props) {
             </h2>
             <nav>
                 <ul className="flex-row">
-                    <li className={`mx-2 ${currentPage === 'information' && 'navActive'}`}>
-                        <span onClick={() => setCurrentPage('information')}>Home
-                        </span>
-                    </li>
-                    <li className={`mx-2 ${currentPage === 'armyBuilder' && 'navActive'}`}>
-                        <span onClick={() => setCurrentPage('armyBuilder')}>Army Builder
-                        </span>
-                    </li>
-                    <li className={`mx-2 ${currentPage === 'listDate' && 'navActive'}`}>
-                        <span onClick={() => setCurrentPage('listDate')}>List Data
-                        </span>
-                    </li>
-                    <li className={`mx-2 ${currentPage === 'contact' && 'navActive'}`}>
-                        <span onClick={() => setCurrentPage('contact')}>Contact</span>
-                    </li>
+                    <div className={`mx-2 ${currentPage === 'information' && 'navActive'}`}>
+                        <span onClick={() => setCurrentPage('information')}>Home</span>
+                    </div>
                 </ul>
+
+                <ul>
+                    <div className={`mx-2 ${currentPage === 'armyBuilder' && 'navActive'}`}>
+                        <span onClick={() => setCurrentPage('armyBuilder')}>Army Builder</span>
+                    </div>
+                </ul>
+
+                <ul>
+                    <div className={`mx-2 ${currentPage === 'customCards' && 'navActive'}`}>
+                        <span onClick={() => setCurrentPage('customCards')}>Custom Cards</span>
+                    </div>
+                </ul>
+
+                <ul>
+                    <div className={`mx-2 ${currentPage === 'listData' && 'navActive'}`}>
+                        <span onClick={() => setCurrentPage('listData')}>List Data</span>
+                    </div>
+                </ul>
+
+                <ul>
+                    <div className={`mx-2 ${currentPage === 'contact' && 'navActive'}`}>
+                        <span onClick={() => setCurrentPage('contact')}>Contact</span>
+                    </div>
+                </ul>
+
             </nav>
         </div>
     );
 }
 
-export default nav;
+export default Nav;
