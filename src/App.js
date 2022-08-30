@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Nav from './components/Nav'
 
 function App() {
+
+  const [currentPage, setCurrentPage] = useState('information');
+
+  function pageRender() {
+    if (currentPage === 'contact') {
+      return <ContactForm></ContactForm>
+    } else if (currentPage === 'information') {
+      return <Information></Information>
+    } else if (currentPage === 'armyBuilder') {
+      return <ArmyBuilder></ArmyBuilder>
+    } else if (currentPage === 'listData') {
+      return <ListData></ListData>
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <Nav></Nav>
       </header>
+      <main>
+        {pageRender()}
+      </main>
     </div>
   );
 }
