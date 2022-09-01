@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ContactForm() {
+function CustomCards() {
 
     return (
         <div>
@@ -9,4 +9,4 @@ function ContactForm() {
     );
 }
 
-export default ContactForm;
+export default CustomCards;

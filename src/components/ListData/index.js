@@ -1,6 +1,6 @@
 import React from 'react';
 
-function listData() {
+function ListData() {
 
     return (
         <div>
@@ -9,4 +9,4 @@ function listData() {
     );
 }
 
-export default listData;
+export default ListData;
