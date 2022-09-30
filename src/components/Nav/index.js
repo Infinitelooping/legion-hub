@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function Nav(props) {
 
     const { currentPage, setCurrentPage, currentArmyCategory, setCurrentArmyCategory } = props
@@ -19,14 +20,14 @@ function Nav(props) {
                         </li>
 
                         <li className="nav-item dropdown">
-                            <a  onClick={() => setCurrentPage('armyBuilder')} className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Army Builder
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Empire</a></li>
-                                <li><a className="dropdown-item" href="#">Rebels</a></li>
-                                <li><a className="dropdown-item" href="#">Republic</a></li>
-                                <li><a className="dropdown-item" href="#">Separatists</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={() => setCurrentPage("armyBuilder") && setCurrentArmyCategory("empire")}>Empire</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={() => setCurrentPage("armyBuilder") && setCurrentArmyCategory("rebels")}>Rebels</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={() => setCurrentPage("armyBuilder") && setCurrentArmyCategory("republic")}>Republic</a></li>
+                                <li><a className="dropdown-item" href="#" onClick={() => setCurrentPage("armyBuilder") && setCurrentArmyCategory("separatists")}>Separatists</a></li>
                             </ul>
                         </li>
 
@@ -59,45 +60,3 @@ function Nav(props) {
 }
 
 export default Nav;
-
-  // <div className='navbar navbar-expand-lg bg-light'>
-        //     <nav className='container-fluid collapse navbar-collapse' id="navbarSupportedContent">
-        //         <ul className="">
-        //             <button className={` ${currentPage === 'information' && 'navActive'}`}>
-        //                 <span onClick={() => setCurrentPage('information')}>Home</span>
-        //             </button>
-        //         </ul>
-
-        //         <ul className='dropdown'> 
-        //             <button className={`btn btn-secondary dropdown-toggle mx-2 ${currentPage === 'armyBuilder' && 'navActive'}`} type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        //                 <span onClick={() => setCurrentPage('armyBuilder')}>Army Builder</span>
-
-        //                 <ul className='dropdown-menu'>
-        //                     <li className='dropdown-item' onClick={() => setCurrentArmyCategory('empire')}>Empire</li>
-        //                     <li className='dropdown-item' onClick={() => setCurrentArmyCategory('rebels')}>Rebels</li>
-        //                     <li className='dropdown-item' onClick={() => setCurrentArmyCategory('republic')}>Republic</li>
-        //                     <li className='dropdown-item' onClick={() => setCurrentArmyCategory('shadowCollective')}>Shadow Collective</li>
-        //                 </ul>
-        //             </button>
-        //         </ul>
-
-        //         <ul>
-        //             <button className={` ${currentPage === 'customCards' && 'navActive'}`}>
-        //                 <span onClick={() => setCurrentPage('customCards')}>Custom Cards</span>
-        //             </button>
-        //         </ul>
-
-        //         <ul>
-        //             <button className={` ${currentPage === 'listData' && 'navActive'}`}>
-        //                 <span onClick={() => setCurrentPage('listData')}>List Data</span>
-        //             </button>
-        //         </ul>
-
-        //         <ul>
-        //             <button className={` ${currentPage === 'contact' && 'navActive'}`}>
-        //                 <span onClick={() => setCurrentPage('contact')}>Contact</span>
-        //             </button>
-        //         </ul>
-
-        //     </nav>
-        // </div>
